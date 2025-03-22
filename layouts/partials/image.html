@@ -1,0 +1,34 @@
+<article>
+
+    <!-- Image -->
+    <a href="{{ .large }}" class="image"><img src="{{ .small }}" alt="" loading="lazy" /></a>
+    <!-- Image -->
+
+
+    <div class="caption">
+
+        {{ with .caption }}
+
+        <!-- Head -->
+        <h3>{{ .head }}</h3>
+        <!-- Head -->
+
+
+        <!-- Body -->
+        <p>{{ .body }}</p>
+        <!-- Body -->
+
+        {{end}}
+
+
+        <!-- Button -->
+        <ul class="actions fixed">
+            <li>
+                <span class="button small">{{ i18n "button_gallery_scale" }}</span>
+            </li>
+        </ul>
+        <!-- Button -->
+
+    </div>
+
+</article>

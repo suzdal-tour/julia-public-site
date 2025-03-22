@@ -1,14 +1,22 @@
-<!-- Gallery -->
-<section class="wrapper style1 align-center" {{ with .id }} id="{{ . }}"{{ end }}>
+<section class="wrapper style1 align-center">
+
     <div class="inner">
-        <h2>{{ .title }}</h2>
-        <p>{{ .content | safeHTML }}</p>
+
+        <!-- Title -->
+        <h2>{{ i18n "title_gallery" }}</h2>
+        <!-- Title -->
+
     </div>
 
-    <!-- Gallery -->
-    <div class="gallery {{ .style }}">
-        {{ range .pictures }}
-            {{ partial "picture" . }}
+
+    <div class="gallery style2 medium lightbox onscroll-fade-in">
+
+        <!-- Images -->
+        {{ range . }}
+        {{ partial "image" . }}
         {{ end }}
+        <!-- Images -->
+
     </div>
+
 </section>
