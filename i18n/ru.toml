@@ -1,2 +1,8 @@
 [button_banner_begin]
 other = "Начать"
+
+[title_gallery]
+other = "Фотографии путешественников"
+ 
+[button_gallery_scale]
+other = "Увеличить"
