@@ -6,3 +6,6 @@ other = "Фотографии путешественников"
  
 [button_gallery_scale]
 other = "Увеличить"
+
+[aria_label_socials]
+other = "Мой аккаунт в {social}"
