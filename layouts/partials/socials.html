@@ -1,0 +1,9 @@
+{{ with .Site.Data.socials }}
+<ul class="icons">
+    {{ range . }}
+    <li>
+        <a target="_blank" href="{{ .href }}" class="icon style2 brands fa-{{ (lower .icon) }}"><span class="label">{{ .icon }}</span></a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
