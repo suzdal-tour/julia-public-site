@@ -1,6 +1,12 @@
 {{ define "main" }}
 
-	{{ partial "banner" site.Data.banner }}
+    <!-- Banner component -->
+    {{ with site.Data.banner }}
+    {{ partial "banner" . }}
+    {{ end }}
+    <!-- Banner component -->
+
+
 	{{ partial "spotlight" site.Data.spotlight1 }}
 	{{ partial "spotlight" site.Data.spotlight2 }}
 	{{ partial "spotlight" site.Data.spotlight3 }}
