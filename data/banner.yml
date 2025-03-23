@@ -1,12 +1,3 @@
-####################### Banner #########################
-style: "style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"
-title : "Hugo Story"
-subtitle: |
-  Hugo Story released for free under the <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/">Creative Commons</a>.
-content : |
-  This is a <strong>Banner</strong> element, and it's generally used as an introduction or opening statement. You can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-banner">details</a>).
-button:
-  label : "Get Started"
-  link : "#first"
-image : "images/banner.jpg"
-
+title: "Обо мне"
+description: "Меня зовут Юлия, и я живу в старинном Суздале половину своей жизни. А родилась и выросла я на Дальнем востоке, у самого синего моря. Суздаль поразил меня своей застывшей русской красотой. Ничего подобного я не встречала на своей родине. И как-то незаметно для себя я стала интересоваться его историей, обычаями, стариной… Со временем я выучилась на гида и стала проводить экскурсии. Чего мы только не делали с туристами! И бегали на квестах, и совершали дальние пешие прогулки, и планировали многодневные туры по церквушкам и монастырям. А несколько лет назад я придумала мастер-классы для гостей города: мы мастерим обережных кукол, печем крендели и печатные пряники. Здесь вы можете посмотреть, какие мастер-классы и активности я предлагаю, и выбрать то, что вам подходит."
+cover_image: "/images/banner.webp"

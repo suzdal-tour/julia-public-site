@@ -1,14 +1,35 @@
-<!-- Banner -->
-<section class="banner {{ .style }}">
+<section class="banner style1 orient-left content-align-justify image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+
     <div class="content">
-        {{ with .title }}<h1>{{ . }}</h1>{{ end }}
-        {{ with .subtitle }}<p class="major">{{ . | safeHTML }}</p>{{ end }}
-        {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
-        {{ with .button }}<ul class="actions stacked">
-            <li><a href="{{ .link }}" class="button primary large wide smooth-scroll-middle">{{ .label }}</a></li>
-        </ul>{{ end }}
+
+        <!-- Title -->
+        <h1>{{ .title }}</h1>
+        <!-- Title -->
+
+
+        <!-- Subtitle -->
+        {{ with .subtitle }}
+        <p class="major">{{ . }}</p>
+        {{ end }}
+        <!-- Subtitle -->
+
+
+        <!-- Description -->
+        <p>{{ .description | safeHTML }}</p>
+        <!-- Description -->
+
+
+        <!-- Button -->
+        {{ partial "button" (dict "href" "#spotlight-0" "key" "button_banner_begin") }}
+        <!-- Button -->
+
     </div>
-    {{ with .image }}<div class="image">
-        <img src="{{.}}" alt="Hugo Story" />
-    </div>{{end}}
+
+
+    <!-- Cover -->
+    <div class="image">
+        <img src="{{ .cover_image }}" alt="" fetchpriority="high" />
+    </div>
+    <!-- Cover -->
+
 </section>
