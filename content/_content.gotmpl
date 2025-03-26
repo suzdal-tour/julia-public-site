@@ -1,0 +1,42 @@
+{{ $ACT_LOGIN := getenv "ACT_LOGIN" }}
+{{ $ACT_GUIDE := getenv "ACT_GUIDE" }}
+
+{{ $activities := newScratch }}
+
+{{ $headers := dict "headers" (dict "Cookie" (index (resources.GetRemote $ACT_LOGIN (dict "responseHeaders" (slice "Set-cookie"))).Data.Headers "Set-Cookie" )) }}
+
+<!---------------------------------------------------------------- 
+|                  Requests data for each guide                  | 
+----------------------------------------------------------------->
+
+{{ range $guide := $ACT_GUIDE | unmarshal }}
+
+<!---------------------------------------------------------------- 
+|      Requests the list of activities from an external API      | 
+----------------------------------------------------------------->
+
+    {{ $remote := resources.GetRemote (replace $guide.list_url "{id}" $guide.id) $headers | unmarshal }}
+
+<!---------------------------------------------------------------- 
+|      Requests info for each activity from an external API      | 
+----------------------------------------------------------------->
+
+    {{ range $remote.results }}
+        {{ $activities.Set (.id | string) (merge
+            (resources.GetRemote (replace $guide.info_url "{id}" .id) $headers | unmarshal)
+            (resources.GetRemote (replace $guide.slot_url "{id}" .id) $headers | unmarshal)) }}
+    {{ end }}
+
+{{ end }}
+
+<!----------------------------------------------------------------  
+|            Merges remote activities with local ones            | 
+----------------------------------------------------------------->
+
+{{ $activities = merge $activities.Values .Site.Data.activities }}
+
+<!----------------------------------------------------------------  
+|          Saves activities to global storage for reuse          | 
+----------------------------------------------------------------->
+
+{{ hugo.Store.Set "activities" $activities }}

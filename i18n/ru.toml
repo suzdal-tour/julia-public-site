@@ -6,3 +6,6 @@ other = "Фотографии путешественников"
  
 [button_gallery_scale]
 other = "Увеличить"
+
+[button_spotlight_read_more]
+other = "Подробнее"
