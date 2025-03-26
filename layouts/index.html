@@ -7,9 +7,9 @@
     <!-- Banner component -->
 
 
-	{{ partial "spotlight" site.Data.spotlight1 }}
-	{{ partial "spotlight" site.Data.spotlight2 }}
-	{{ partial "spotlight" site.Data.spotlight3 }}
+    <!-- Spotlight component -->
+    {{ partial "_hub" (dict "context" . "template" "spotlight") }}
+    <!-- Spotlight component -->
 
 
     <!-- Gallery component -->

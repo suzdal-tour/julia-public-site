@@ -35,3 +35,7 @@ disableKinds = ["taxonomy", "section"]
   description = "A (modular, highly tweakable) responsive one-page theme for Hugo"
   logo = "images/banner.jpg"
   favicon = true
+
+[module]
+  [[module.imports]]
+    path = 'github.com/suzdal-tour/hugo-adapter-module'
