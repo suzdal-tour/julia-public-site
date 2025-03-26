@@ -9,3 +9,6 @@ other = "Увеличить"
 
 [aria_label_socials]
 other = "Мой аккаунт в {social}"
+
+[button_spotlight_read_more]
+other = "Подробнее"

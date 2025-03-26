@@ -35,3 +35,7 @@ disableKinds = ["taxonomy", "section"]
   description = "Приглашаю вас на творческие мастер-классы в Суздале: обережные куклы, крендели и ароматные пряники - традиции, которые оживают в ваших руках."
   images = ["./images/banner.webp"]
   favicon = true
+
+[module]
+  [[module.imports]]
+    path = 'github.com/suzdal-tour/hugo-adapter-module'

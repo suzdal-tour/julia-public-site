@@ -1,0 +1,7 @@
+status: "active"
+title: "Мастерим куклу Крупеничку"
+cover_image: "/images/cover_22910.webp"
+price:
+  per_person:
+    - title: "Стандартный билет"
+      value: 2000
