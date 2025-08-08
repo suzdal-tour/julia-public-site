@@ -1,0 +1,15 @@
+<meta charset="utf-8" />
+
+<!-- Description -->
+<meta name="description" content="{{ .Site.Params.description }}">
+<!-- Description -->
+
+
+<!-- Open Graph -->
+{{ template "_internal/opengraph.html" . }}
+<!-- Open Graph -->
+
+
+{{ range $name, $content := .Site.Data.internal.meta }}
+    <meta name="{{ $name }}" content="{{ $content }}">
+{{ end }}

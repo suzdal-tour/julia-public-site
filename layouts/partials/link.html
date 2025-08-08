@@ -1,0 +1,3 @@
+{{range .Site.Data.internal.link }}
+    <link {{ range $attribute, $value := . }} {{ $attribute | safeHTMLAttr }}="{{ $value }}" {{ end }} />
+{{ end }}
