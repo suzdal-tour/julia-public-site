@@ -9,3 +9,12 @@ other = "Увеличить"
 
 [button_spotlight_read_more]
 other = "Подробнее"
+
+[th_activity_price_title]
+other = "Билет"
+
+[th_activity_price_value]
+other = "Стоимость"
+
+[button_activity_booking]
+other = "Забронировать"
