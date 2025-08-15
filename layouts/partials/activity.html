@@ -1,0 +1,53 @@
+<section class="wrapper style1 content-align-justify">
+
+    <div class="inner">
+
+        <section id="activity-{{ .index }}">
+
+            <div class="content">
+
+                <!-- Title -->
+                <header>
+                    <h2>{{ .title }}</h2>
+                </header>
+                <!-- Title -->
+
+
+                <!-- Description -->
+                {{ .description | safeHTML }}
+                <!-- Description -->
+
+
+                <!-- Prices -->
+                <div class="table-wrapper">
+                    <table class="alt" data-activity-price-id="{{ .id }}">
+                        <thead>
+                            <tr>
+                                <th>{{ i18n "th_activity_price_title" }}</th>
+                                <th>{{ i18n "th_activity_price_value" }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{ range .price.per_person }}
+                            <tr>
+                                <td>{{ .title }}</td>
+                                <td data-activity-price-type="{{ .title }}">{{ .value }}</td>
+                            </tr>
+                            {{ end }}
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Prices -->
+
+
+                <!-- Button -->
+                {{ partial "button" (dict "href" "#booking" "key" "button_activity_booking") }}
+                <!-- Button -->
+
+            </div>
+
+        </section>
+
+    </div>
+
+</section>
