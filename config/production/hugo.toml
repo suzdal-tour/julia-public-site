@@ -35,7 +35,3 @@ disableKinds = ["taxonomy", "section"]
   description = "A (modular, highly tweakable) responsive one-page theme for Hugo"
   logo = "images/banner.jpg"
   favicon = true
-
-[Params.asset]
-  fontawesome_css = ["css/fontawesome-all.min.css"]
-  fontawesome_js = ["js/fontawesome-all.min.js"]
