@@ -1,0 +1,23 @@
+@include breakpoint('<=medium') {
+
+    .content {
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        .major {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .actions {
+            text-align: center;
+        }
+    }
+}

@@ -7,20 +7,17 @@
 	{{ if .Site.Params.favicon }}
 	{{ partial "favicon" }}
 	{{ end }}
-	
-	<!-- CSS -->
-	{{ if hugo.IsServer }}
-	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) }}
-	<link rel="stylesheet" href="{{ ($style).RelPermalink }}">
-	{{ else }}
-	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "enableSourceMap" false) }}
-	<link rel="stylesheet" href="{{ ($style | minify).RelPermalink }}">
-	{{ end }}
-	{{ if hugo.IsServer }}
-	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
-	<noscript><link rel="stylesheet" href="{{ ($noscript).RelPermalink }}" /></noscript>
-	{{ else }}
-	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
-	<noscript><link rel="stylesheet" href="{{ ($noscript | minify).RelPermalink }}" /></noscript>
-	{{end}}
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ (slice (resources.Get `sass/main.scss`) | append (resources.Match `sass/*.*`) | resources.Concat `sass/main.scss` | resources.ExecuteAsTemplate `scss/main.scss` . | toCSS (dict `targetPath` `css/main.css` `outputStyle` `compressed` `enableSourceMap` false)).RelPermalink }}">
+    <!-- CSS -->
+
+
+    <!-- NoScript CSS -->
+    <noscript>
+        <link rel="stylesheet" href="{{ (resources.Get `sass/noscript.scss` | resources.ExecuteAsTemplate `noscript.scss` . | toCSS (dict `targetPath` `css/noscript.css` `enableSourceMap` false) | minify).RelPermalink }}" />
+    </noscript>
+    <!-- NoScript CSS -->
+
 </head>
