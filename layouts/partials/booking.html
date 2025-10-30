@@ -1,0 +1,96 @@
+{{ with hugo.Store.Get "activities" }}
+<section class="wrapper style1 align-center">
+
+    <div class="inner">
+
+        <!-- Title -->
+        <h2>{{ i18n "title_booking" }}</h2>
+        <!-- Title -->
+
+        <div class="index align-left">
+
+            <section id="booking">
+
+                <div class="content">
+
+                    <!-- booking -->
+                    <form action="https://booking.suzdal-tour.workers.dev/booking" method="POST" enctype="multipart/form-data">
+
+
+                        <div class="fields">
+
+                            {{ range . }}
+                            <input type="hidden" id="receiver" name="receiver" value="{{ .guide.id }}" />   
+                            {{ break }}
+                            {{ end }}
+                           <!--  -->
+
+                            <!-- Activity -->
+                            <div class="field">
+                                <label for="activity">{{ i18n "select_booking_activity" }}</label>
+                                <select name="activity" id="activity" required>
+                                    {{ range . }}
+                                        {{ if eq .status "active" }}
+                                            <option data-booking-activity-id="{{ .id }}" value="{{ .title }} [{{ .id }}]">{{ .title }}</option>
+                                        {{ end }}
+                                    {{ end }}
+                                </select>
+                            </div>
+                            <!-- Activity -->
+
+
+                            <!-- Persons -->
+                            <div class="field half">
+                                <label for="persons">{{ i18n "input_booking_persons" }}</label>
+                                <input type="number" id="persons" name="persons" min="1" max="100" value="1" required />
+                            </div>
+                            <!-- Persons -->
+
+
+                            <!-- Datetime -->
+                            <div class="field half">
+                                <label for="datetime">{{ i18n "input_booking_datetime" }}</label>
+                                <input type="date" name="datetime" id="datetime" required />
+                            </div>
+                            <!-- Datetime -->
+
+
+                            <!-- Guide Fee -->
+                            <div class="field half">
+                                <label for="guideFee">{{ i18n "input_booking_guide_fee" }}</label>
+                                <input type="text" name="guideFee" id="guideFee" value="0" readonly />
+                            </div>
+                            <!-- Guide Fee -->
+
+
+                            <!-- Contact -->
+                            <div class="field half">
+                                <label for="contact">{{ i18n "input_booking_contact" }}</label>
+                                <input type="tel" name="contact" id="contact" placeholder="+7 (xxx) xxx-xx-xx" required />
+                            </div>
+                            <!-- Contact -->
+
+                            
+                            <div class="field">
+                                <label for="comment">{{ i18n "textarea_booking_comment" }}</label>
+                                <textarea name="comment" id="comment" rows="6" required></textarea>
+                            </div>
+
+                        </div>
+
+                        <ul class="actions">
+                            <li><input type="submit" name="submit" id="submit" value="{{ i18n `button_booking_submit` }}" /></li>
+                        </ul>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</section>
+{{ end }}
