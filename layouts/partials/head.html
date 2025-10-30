@@ -2,8 +2,18 @@
 	<title>{{ .Site.Title }}</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="description" content="">
-	<meta name="author" content="">
+
+
+    <!-- Meta description -->
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <!-- Meta description -->
+
+
+    <!-- Open Graph -->
+    {{ template "_internal/opengraph.html" . }}
+    <!-- Open Graph -->
+
+
 	{{ if .Site.Params.favicon }}
 	{{ partial "favicon" }}
 	{{ end }}
