@@ -32,8 +32,8 @@ disableKinds = ["taxonomy", "section"]
 ## -----------------------------------------------
 
 [Params]
-  description = "A (modular, highly tweakable) responsive one-page theme for Hugo"
-  logo = "images/banner.jpg"
+  description = "Приглашаю вас на творческие мастер-классы в Суздале: обережные куклы, крендели и ароматные пряники - традиции, которые оживают в ваших руках."
+  images = ["./images/banner.webp"]
   favicon = true
 
 [module]
