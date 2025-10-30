@@ -18,3 +18,18 @@ other = "Стоимость"
 
 [button_activity_booking]
 other = "Забронировать"
+
+[title_booking_popup_success]
+other = "Бронь в обработке"
+
+[title_booking_popup_failure]
+other = "Ошибка бронирования"
+
+[p_booking_popup_success]
+other = "Мы свяжемся с вами в ближайшее время"
+
+[p_booking_popup_failure]
+other = "Пожалуйста, попробуйте еще раз или свяжитесь с нами"
+
+[button_booking_popup_close]
+other = "Закрыть"
