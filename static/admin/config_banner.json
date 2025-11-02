@@ -1,0 +1,33 @@
+{
+    "singletons":[
+        {
+            "label":"Banner",
+            "name":"banner",
+            "icon":"home",
+            "file":"/data/banner.yml",
+            "fields":[
+                {
+                    "label":"Title",
+                    "name":"title",
+                    "widget":"string"
+                },
+                {
+                    "label":"Subtitle",
+                    "name":"subtitle",
+                    "widget":"string",
+                    "required":false
+                },
+                {
+                    "label":"Description",
+                    "name":"description",
+                    "widget":"text"
+                },
+                {
+                    "label":"Cover",
+                    "name":"cover_image",
+                    "widget":"image"
+                }
+            ]
+        }
+    ]
+}

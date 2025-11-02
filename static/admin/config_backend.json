@@ -1,0 +1,7 @@
+{
+    "backend":{
+        "name":"github",
+        "repo":"suzdal-tour/julia-public-site",
+        "branch":"develop"
+    }
+}
