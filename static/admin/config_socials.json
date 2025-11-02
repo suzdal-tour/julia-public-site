@@ -1,0 +1,33 @@
+{
+    "singletons":[
+        {
+            "label":"Socials",
+            "name":"socials",
+            "icon":"public",
+            "file":"data/socials.yml",
+            "fields":[
+                {
+                    "label":"Links",
+                    "name":"links",
+                    "widget":"list",
+                    "root":true,
+                    "fields":[
+                        {
+                            "label":"href",
+                            "name":"href",
+                            "widget":"string"
+                        },
+                        {
+                            "label":"icon",
+                            "name":"icon",
+                            "widget":"select",
+                            "options":[
+                                "Bluesky", "Email", "Instagram", "LinkedIn", "Telegram", "Twitter", "VK"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
