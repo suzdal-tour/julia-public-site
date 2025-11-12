@@ -1,2 +1,4 @@
 github.com/suzdal-tour/hugo-adapter-module v0.2.0 h1:JZ/eXks9JDkUVOrtoABgDbeF+szrNdDX4XYzEbhB4QI=
 github.com/suzdal-tour/hugo-adapter-module v0.2.0/go.mod h1:nIfLT1h+5jBXylMshaNzcR0nEpywBA3MwEzljkOXcHQ=
+github.com/suzdal-tour/hugo-form-module v0.1.0 h1:PFBb4dkzTjnBtCzcZ3o6LjHpOJr1Fi+bCnTmzhKUhGw=
+github.com/suzdal-tour/hugo-form-module v0.1.0/go.mod h1:oIk9q8zxuHp0xaI76sBLsTyOlWahIzxDjSSlKjcxKfM=

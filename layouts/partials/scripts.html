@@ -5,7 +5,8 @@
 {{ $breakpoints := resources.Get "js/breakpoints.min.js"     }}
 {{ $util        := resources.Get "js/util.js"                }}
 {{ $main        := resources.Get "js/main.js"                }}
+{{ $calc        := resources.Get "js/calculator.js"          }}
 
-{{ $js := slice $jQuery $scrollex $scrolly $browser $breakpoints $util $main | resources.Concat "js/bundle.js" | minify }}
+{{ $js := slice $jQuery $scrollex $scrolly $browser $breakpoints $util $main $calc | resources.Concat "js/bundle.js" | minify }}
 
 <script defer src="{{ $js.RelPermalink }}"></script>

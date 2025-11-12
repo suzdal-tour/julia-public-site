@@ -24,6 +24,17 @@
     <!-- Activity component -->
 
 
+    <!-- Booking component -->
+    {{ with site.Data.booking}}
+        {{ if .enabled }}
+            {{ partial "booking" . }}
+            {{ partial "success" $ }}
+            {{ partial "failure" $ }}
+        {{ end }}
+    {{ end }}
+    <!-- Booking component -->
+
+
     <!-- Footer component -->
     {{ partial "footer" . }}
     <!-- Footer component -->

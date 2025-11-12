@@ -18,3 +18,42 @@ other = "Стоимость"
 
 [button_activity_booking]
 other = "Забронировать"
+
+[title_booking_popup_success]
+other = "Бронь в обработке"
+
+[title_booking_popup_failure]
+other = "Ошибка бронирования"
+
+[p_booking_popup_success]
+other = "Мы свяжемся с вами в ближайшее время"
+
+[p_booking_popup_failure]
+other = "Пожалуйста, попробуйте еще раз или свяжитесь с нами"
+
+[button_booking_popup_close]
+other = "Закрыть"
+
+[title_booking]
+other = "Бронирование"
+
+[select_booking_activity]
+other = "Активность"
+
+[input_booking_datetime]
+other = "Дата"
+
+[input_booking_contact]
+other = "Контакт"
+
+[input_booking_persons]
+other = "Участники"
+
+[input_booking_guide_fee]
+other = "Стоимость"
+
+[textarea_booking_comment]
+other = "Дополнительный комментарий"
+
+[button_booking_submit]
+other = "Отправить"

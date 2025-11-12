@@ -1,0 +1,100 @@
+enabled: true
+
+# Form attributes
+action: "https://booking.suzdal-tour.workers.dev/booking"
+method: "POST"
+enctype: "multipart/form-data"
+
+# Form fields
+fields:
+  - {
+      # Module-related properties
+      order: 0,
+      kind: "select",
+      style: "field",
+      key: "select_booking_activity",
+
+      # Field attributes
+      attributes: { name: "activity", id: "activity", required: "required" },
+
+      # Field value
+      value: { store: "activities", attributes: { data-booking-activity-id: "{{ .id }}", value: "{{ .title }} [{{ .id }}]" }, value: "{{ .title }}" }
+    }
+  - {
+      # Module-related properties
+      order: 1,
+      kind: "input",
+
+      # Field attributes
+      attributes: { type: "hidden", name: "receiver" },
+
+      # Field value
+      value: "{{ range hugo.Store.Get `activities` }} {{- .guide.id -}} {{ break }} {{ end }}"
+    }
+  - {
+      # Module-related properties
+      order: 2,
+      kind: "input",
+      style: "field half",
+      key: "input_booking_persons",
+
+      # Field attributes
+      attributes: { type: "number", name: "persons", id: "persons", min: 1, max: 100, required: "required" },
+
+      # Field value
+      value: 1
+    }
+  - {
+      # Module-related properties
+      order: 3,
+      kind: "input",
+      style: "field half",
+      key: "input_booking_datetime",
+
+      # Field attributes
+      attributes: { type: "date", name: "datetime", id: "datetime", required: "required" }
+    }
+  - {
+      # Module-related properties
+      order: 4,
+      kind: "input",
+      style: "field half",
+      key: "input_booking_guide_fee",
+
+      # Field attributes
+      attributes: { type: "number", name: "guideFee", id: "guideFee", min: 0, readonly: "readonly" },
+
+      # Field value
+      value: 0
+    }
+  - {
+      # Module-related properties
+      order: 5,
+      kind: "input",
+      style: "field half",
+      key: "input_booking_contact",
+
+      # Field attributes
+      attributes: { type: "tel", name: "contact", id: "contact", placeholder: "+7 (xxx) xxx-xx-xx", required: "required" }
+    }
+  - {
+      # Module-related properties
+      order: 6,
+      kind: "textarea",
+      style: "field",
+      key: "textarea_booking_comment",
+
+      # Field attributes
+      attributes: { name: "comment", id: "comment", rows: 6, required: "required" }
+    }
+
+# Form submit button
+submit:
+  # Module-related properties
+  kind: "input"
+
+  # Field attributes
+  attributes: { type: "submit", name: "submit" }
+
+  # Field value
+  value: "button_booking_submit"
