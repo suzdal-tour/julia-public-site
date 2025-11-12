@@ -1,4 +1,6 @@
-{{ $js := slice }}
+{{ $calc := resources.Get "js/calculator.js" }}
+
+{{ $js := slice $calc | resources.Concat "js/bundle.js" | minify }}
 
 {{ with $js }}
 <script defer src="{{ $js.RelPermalink }}"></script>
