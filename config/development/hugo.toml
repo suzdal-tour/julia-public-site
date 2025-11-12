@@ -39,3 +39,5 @@ disableKinds = ["taxonomy", "section"]
 [module]
   [[module.imports]]
     path = 'github.com/suzdal-tour/hugo-adapter-module'
+  [[module.imports]]
+    path = "github.com/suzdal-tour/hugo-form-module"
