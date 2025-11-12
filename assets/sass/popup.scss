@@ -1,0 +1,47 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+}
+
+.popup:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.popup:not(:target) {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popup .inner {
+    border-radius: 16px;
+    background-color: white;
+}
+
+
+#failure {
+    >.inner {
+        background: #f8d7da;
+        border: 2px solid #dc3545;
+        padding: 20px;
+        max-width: 400px;
+        color: #721c24;
+    }
+}
+
+#success {
+    >.inner {
+        background: #d4edda;
+        border: 2px solid #28a745;
+        padding: 20px;
+        max-width: 400px;
+        color: #155724;
+    }
+}
