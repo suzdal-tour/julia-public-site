@@ -1,0 +1,29 @@
+<section class="wrapper style1 align-center">
+
+    <div class="inner">
+
+        <!-- Title -->
+        <h2>{{ .title }}</h2>
+        <!-- Title -->
+
+
+        <!-- Description -->
+        {{ with .description }}
+        <p class="align-justify">{{ . | safeHTML }}</p>
+        {{ end }}
+        <!-- Description -->
+
+
+        <!-- Items -->
+        <div class="items style1 medium onscroll-fade-in">
+            {{ range .items }}
+            {{ partial "item" . }}
+            {{ end }}
+        </div>
+        <!-- Items -->
+
+    </div>
+
+</section>
+
+{{ hugo.Store.Get "section"  }}
