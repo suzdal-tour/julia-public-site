@@ -1,7 +1,10 @@
-status: "active"
-title: "Печём крендели"
-cover_image: "/images/cover_32275.webp"
+id: null
+title: Печём крендели
+status: active
+cover_image: /images/cover_32275.webp
+annotation: ''
+description: ''
 price:
   per_person:
-    - title: "Стандартный билет"
-      value: 2100
+    - title: Стандартный билет
+      value: 2300
