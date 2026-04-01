@@ -1,7 +1,10 @@
-status: "active"
+id: null
 title: Печём русский пряник
-cover_image: "/images/cover_54117.webp"
+status: active
+cover_image: /images/cover_54117.webp
+annotation: ''
+description: ''
 price:
   per_person:
-    - title: "Стандартный билет"
-      value: 2100
+    - title: Стандартный билет
+      value: 2300
