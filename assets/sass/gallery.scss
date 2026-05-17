@@ -1,0 +1,10 @@
+.gallery {
+    
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    
+}
+
+.gallery article {
+    scroll-snap-align: center;
+}
